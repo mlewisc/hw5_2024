@@ -6,7 +6,7 @@
     100% {opacity: 1;width: 475px}
 }
 
-/* Apply the logo animation to the logo and determining a duration of 5 secs and so it only happens once when the page loads*/
+/* Apply the logo animation to the logo, determining a duration of 5 secs and so it only happens once when the page loads */
 #logo {
     animation: logoanimation 5s;
     animation-iteration-count: 1;
@@ -30,6 +30,7 @@ header {
     align-items: flex-start;
 }
 
+/* Ensure the link color doesn't change after is it visited */
 a:visited {
     color: blue;
 }
@@ -104,6 +105,7 @@ a:visited {
     #logo {animation: none;}
 }
 
+/* Styles for the Print View */
 @media print {
 
     body {
@@ -111,6 +113,7 @@ a:visited {
         background-image: none;
     }
 
+    /* Adjust the navigation width to 100% so there's enough space for the flex items of .nav_links to be spaced evenly */
     nav {width: 100%;}
 
     .nav_links {
@@ -129,9 +132,10 @@ a:visited {
         flex-basis: 325px;
     }
 
-    .gallery {display: none;}
-    #gallery {visibility: hidden;}
+    /* Remove all gallery content from the page */
+    .gallery, #gallery {display: none;}
 
+    /* Add a thumbs up entity after the 2nd list element inside an element with class="card" */
     .card li:nth-child(2):after {
         content: ' \1f44d';
     }
